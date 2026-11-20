@@ -130,6 +130,13 @@
   .contact{background:var(--olive);color:var(--cream);padding:110px 0;text-align:center}
   .contact h2{font-size:clamp(2.6rem,6vw,4.4rem)}
   .contact p{opacity:.75;margin-top:14px}
+  .contact-info{margin:44px auto 0;display:grid;grid-template-columns:repeat(3,1fr);max-width:820px;border-top:1px solid rgba(247,241,230,.2);border-bottom:1px solid rgba(247,241,230,.2)}
+  .contact-info div{padding:26px 16px}
+  .contact-info div+div{border-left:1px solid rgba(247,241,230,.2)}
+  .contact-info span.label{display:block;opacity:.55;margin-bottom:10px;font-family:var(--sans);font-size:.72rem}
+  .contact-info a,.contact-info span{font-family:var(--serif);font-size:1.3rem;text-decoration:none;line-height:1.35}
+  .contact-info a:hover{color:var(--accent)}
+  @media (max-width:700px){.contact-info{grid-template-columns:1fr}.contact-info div+div{border-left:0;border-top:1px solid rgba(247,241,230,.2)}}
   .contact .links{margin-top:40px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
   .btn{display:inline-block;padding:14px 28px;border:1px solid rgba(247,241,230,.5);text-decoration:none;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;transition:background .2s,color .2s}
   .btn:hover{background:var(--cream);color:var(--olive)}
@@ -460,8 +467,12 @@
     <span class="label" style="opacity:.6">Kontakt</span>
     <h2 class="reveal" style="margin-top:16px">Razgovarajmo.</h2>
     <p>Otvoren sam za suradnju, prakse i nove prilike.</p>
+    <div class="contact-info">
+      <div><span class="label">E-mail</span><a href="mailto:treppoantonio@gmail.com">treppoantonio@gmail.com</a></div>
+      <div><span class="label">Telefon</span><a href="tel:+385916227818">+385 91 622 7818</a></div>
+      <div><span class="label">Adresa</span><span>10310 Ivanić Grad<br>Hrvatska</span></div>
+    </div>
     <div class="links">
-      <a class="btn" href="mailto:treppoantonio@gmail.com">E-mail</a>
       <a class="btn" href="https://www.linkedin.com/in/antonio-treppo-569b9925b" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
