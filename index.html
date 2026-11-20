@@ -63,15 +63,16 @@
   @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
   /* ABOUT */
-  .about{background:var(--olive);color:var(--cream);display:grid;grid-template-columns:1.1fr 1fr;min-height:520px}
+  .about{background:var(--olive);color:var(--cream);display:grid;grid-template-columns:1.1fr 0.9fr 1fr;min-height:560px}
   .about .col{padding:80px 56px;display:flex;flex-direction:column;justify-content:center}
   .about .left .label{margin-bottom:22px;opacity:.7}
   .about .left p{font-size:.96rem;opacity:.88}
   .about .left p+p{margin-top:14px}
   .about .quote-col{background:var(--olive-2)}
+  .about .photo{padding:0;background:url("img/antonio.jpg") center 25% / cover no-repeat;min-height:460px}
   .about .quote{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);text-align:center}
   .about .quote small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-top:22px;opacity:.6}
-  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}}
+  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}.about .photo{min-height:420px;order:-1}}
 
   /* SECTIONS */
   section.block{padding:110px 0}
@@ -193,6 +194,7 @@
     <p>Kroz studij sam stekao znanja iz makro i mikroekonomske analize, kreiranja politika, strukturiranja intervjua i fokus grupa, izrade istraživačkih instrumenata poput anketa i analitičkih matrica te statističke obrade i prikazivanja podataka.</p>
     <p>Sebe u budućnosti vidim u visokom obrazovanju, financijskom sektoru, agencijama za istraživanje tržišta ili ljudskim potencijalima.</p>
   </div>
+  <div class="col photo" role="img" aria-label="Antonio Treppo"></div>
   <div class="col quote-col reveal">
     <div class="quote">Podaci pričaju<br>priče o ljudima.<small>Sociologija · Statistika · Politike</small></div>
   </div>
