@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Antonio Treppo – Životopis</title>
-<meta property="og:image" content="img/portret.jpg">
 <meta name="description" content="Antonio Treppo – prvostupnik sociologije, student diplomskog studija upravljanja i javnih politika. Istraživanje, analiza podataka i javne politike.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,14 +41,20 @@
   @media (max-width:760px){nav ul{display:none}}
 
   /* HERO */
-  .hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;text-align:left;color:var(--cream);
+  .hero{min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--cream);
     background:
-      linear-gradient(180deg, rgba(20,18,14,.35) 0%, rgba(20,18,14,.15) 40%, rgba(20,18,14,.85) 100%),
-      url("img/hero.jpg") 70% 52% / cover no-repeat, var(--hero);
+      radial-gradient(ellipse at 50% 35%, rgba(176,138,79,.18), transparent 60%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 140px),
+      linear-gradient(180deg,#24211a 0%, var(--hero) 100%);
     position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,rgba(0,0,0,.35))}
-  .hero-inner{position:relative;z-index:1;width:100%;max-width:1100px;margin:0 auto;padding:0 24px 120px}
-  .hero h1{text-shadow:0 2px 24px rgba(0,0,0,.45);font-size:clamp(3rem,9vw,6.2rem);letter-spacing:.01em}
+  .hero-inner{position:relative;z-index:1;padding:90px 16px}
+  .hero-btns{margin-top:44px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .hero-btns .btn{min-width:150px;text-align:center}
+  .hero-btns .btn.primary{background:var(--cream);color:var(--hero);border-color:var(--cream)}
+  .hero-btns .btn.primary:hover{background:transparent;color:var(--cream)}
+  @media (max-width:520px){.hero-btns{display:grid;grid-template-columns:1fr 1fr;max-width:340px;margin-left:auto;margin-right:auto}.hero-btns .btn{min-width:0;padding:14px 10px}.hero-btns .btn.primary{grid-column:1/-1}}
+  .hero h1{font-size:clamp(3rem,9vw,6.2rem);letter-spacing:.01em}
   .hero .role{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.6rem);margin-top:10px;opacity:.85;font-style:italic}
   .hero .meta{margin-top:28px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
   .scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:1;color:var(--cream);opacity:.55;
@@ -58,15 +63,15 @@
   @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
   /* ABOUT */
-  .about{background:var(--olive);color:var(--cream);display:grid;grid-template-columns:1fr 1.15fr 1.2fr;min-height:560px}
-  .about .col{padding:64px 40px;display:flex;flex-direction:column;justify-content:center}
+  .about{background:var(--olive);color:var(--cream);display:grid;grid-template-columns:1.1fr 1fr;min-height:520px}
+  .about .col{padding:80px 56px;display:flex;flex-direction:column;justify-content:center}
   .about .left .label{margin-bottom:22px;opacity:.7}
   .about .left p{font-size:.96rem;opacity:.88}
   .about .left p+p{margin-top:14px}
-  .about .photo{padding:0;background:url("img/portret.jpg") center 20% / cover no-repeat;min-height:420px}
+  .about .quote-col{background:var(--olive-2)}
   .about .quote{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);text-align:center}
   .about .quote small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-top:22px;opacity:.6}
-  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.about .photo{display:none}.scroll{display:none}}
+  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}}
 
   /* SECTIONS */
   section.block{padding:110px 0}
@@ -103,6 +108,14 @@
   .award p{font-size:.88rem;opacity:.7}
   @media (max-width:700px){.award-grid{grid-template-columns:1fr}}
 
+  /* Portfolio */
+  .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pf-item{background:var(--cream);border:1px dashed var(--line);padding:36px 28px;min-height:220px}
+  .pf-item .label{color:var(--accent)}
+  .pf-item h3{font-size:1.6rem;margin:14px 0 10px}
+  .pf-item p{font-size:.9rem;color:#3d3a32}
+  @media (max-width:860px){.portfolio{grid-template-columns:1fr}}
+
   /* Skills */
   .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
   .skills h3{font-size:1.5rem;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
@@ -134,11 +147,11 @@
   <div class="wrap">
     <a href="#top" class="brand">A. Treppo</a>
     <ul>
-      <li><a href="#o-meni">O meni</a></li>
       <li><a href="#obrazovanje">Obrazovanje</a></li>
       <li><a href="#iskustvo">Iskustvo</a></li>
-      <li><a href="#projekti">Projekti</a></li>
-      <li><a href="#vjestine">Vještine</a></li>
+      <li><a href="#volontiranje">Volontiranje</a></li>
+      <li><a href="#nagrade">Nagrade</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </div>
@@ -149,6 +162,13 @@
     <h1>Antonio Treppo</h1>
     <div class="role">Sociolog · Istraživanje i javne politike</div>
     <div class="meta">Ivanić Grad · Zagreb</div>
+    <div class="hero-btns">
+      <a class="btn" href="#obrazovanje">Obrazovanje</a>
+      <a class="btn" href="#iskustvo">Iskustvo</a>
+      <a class="btn" href="#volontiranje">Volontiranje</a>
+      <a class="btn" href="#nagrade">Nagrade</a>
+      <a class="btn primary" href="#portfolio">Portfolio</a>
+    </div>
   </div>
   <a href="#o-meni" class="scroll">Dalje</a>
 </header>
@@ -160,53 +180,50 @@
     <p>Kroz studij sam stekao znanja iz makro i mikroekonomske analize, kreiranja politika, strukturiranja intervjua i fokus grupa, izrade istraživačkih instrumenata poput anketa i analitičkih matrica te statističke obrade i prikazivanja podataka.</p>
     <p>Sebe u budućnosti vidim u visokom obrazovanju, financijskom sektoru, agencijama za istraživanje tržišta ili ljudskim potencijalima.</p>
   </div>
-  <div class="col photo" role="img" aria-label="Antonio Treppo"></div>
-  <div class="col reveal">
+  <div class="col quote-col reveal">
     <div class="quote">Podaci pričaju<br>priče o ljudima.<small>Sociologija · Statistika · Politike</small></div>
   </div>
 </section>
 
 <section class="block" id="obrazovanje">
   <div class="wrap">
-    <h2 class="reveal">Obrazovanje &amp;<br>Iskustvo</h2>
+    <h2 class="reveal">Obrazovanje</h2>
     <div class="cards reveal">
+      <div class="card">
+        <div class="year">Srednja škola</div>
+        <h3>Opća gimnazija</h3>
+        <p>Srednja škola Ivan Švear, Ivanić Grad</p>
+      </div>
       <div class="card">
         <div class="year">2021 – 2024</div>
         <h3>Prvostupnik sociologije</h3>
-        <p>Hrvatsko katoličko sveučilište, Zagreb<br>Prosjek ocjena: 4,623</p>
+        <p>Hrvatsko katoličko sveučilište, Zagreb<br>Završna ocjena: 4,623</p>
+        <p>Kolegiji metodološke, političke, ekonomske, teorijske i statističke prirode.</p>
       </div>
       <div class="card">
-        <div class="year">2023 – 2026</div>
-        <h3>Demonstrator</h3>
-        <p>Statistika, regresijska i faktorska analiza, suvremene sociološke teorije</p>
-      </div>
-      <div class="card">
-        <div class="year">2026 – danas</div>
-        <h3>Administrativni radnik</h3>
-        <p>Erste banka d.d., Zagreb</p>
+        <div class="year">u tijeku</div>
+        <h3>Diplomski studij</h3>
+        <p>Upravljanje i kreiranje javnih politika<br>Hrvatsko katoličko sveučilište, Zagreb</p>
       </div>
     </div>
-    <div class="timeline" style="margin-top:60px">
+    <h3 class="reveal" style="font-size:1.7rem;margin:70px 0 20px">Seminari i tečajevi</h3>
+    <div class="timeline">
       <div class="item reveal">
-        <div class="date">u tijeku</div>
+        <div class="date">Srce</div>
+        <div><h3>Proračunske tablice – napredna razina Excela</h3></div>
+      </div>
+      <div class="item reveal">
+        <div class="date">04/2023</div>
         <div>
-          <h3>Diplomski studij – Upravljanje i kreiranje javnih politika</h3>
-          <div class="org">Hrvatsko katoličko sveučilište, Zagreb</div>
+          <h3>Pisanje projekata za EU fondove</h3>
+          <div class="org">Hrvatsko katoličko sveučilište</div>
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">10/2021 – 06/2024</div>
+        <div class="date">09/2021</div>
         <div>
-          <h3>Prvostupnik sociologije</h3>
-          <div class="org">Hrvatsko katoličko sveučilište, Zagreb</div>
-          <p>Kolegiji metodološke, političke, ekonomske, teorijske i statističke prirode. Završna ocjena 4,623.</p>
-        </div>
-      </div>
-      <div class="item reveal">
-        <div class="date">Srednja škola</div>
-        <div>
-          <h3>Opća gimnazija</h3>
-          <div class="org">Srednja škola Ivan Švear, Ivanić Grad</div>
+          <h3>Uvod u softversko inženjerstvo za studente društvenih znanosti</h3>
+          <div class="org">Hrvatsko katoličko sveučilište · Oracle Academy</div>
         </div>
       </div>
     </div>
@@ -336,24 +353,6 @@
   </div>
 </section>
 
-<section class="awards">
-  <div class="wrap">
-    <h2 class="reveal">Nagrade &amp; priznanja</h2>
-    <div class="award-grid reveal">
-      <div class="award">
-        <div class="star">✦</div>
-        <h3>Rektorova nagrada</h3>
-        <p>za izvrsnost na prijediplomskoj razini · lipanj 2025.</p>
-      </div>
-      <div class="award">
-        <div class="star">✦</div>
-        <h3>Rektorova pohvalnica</h3>
-        <p>za izvrsnost u ak. god. 2023./2024. · siječanj 2025.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="block alt" id="volontiranje">
   <div class="wrap">
     <h2 class="reveal">Volontiranje &amp;<br>studentske uloge</h2>
@@ -396,6 +395,35 @@
   </div>
 </section>
 
+<section class="awards" id="nagrade">
+  <div class="wrap">
+    <h2 class="reveal">Nagrade &amp; priznanja</h2>
+    <div class="award-grid reveal">
+      <div class="award">
+        <div class="star">✦</div>
+        <h3>Rektorova nagrada</h3>
+        <p>za izvrsnost na prijediplomskoj razini · lipanj 2025.</p>
+      </div>
+      <div class="award">
+        <div class="star">✦</div>
+        <h3>Rektorova pohvalnica</h3>
+        <p>za izvrsnost u ak. god. 2023./2024. · siječanj 2025.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="portfolio">
+  <div class="wrap">
+    <h2 class="reveal">Portfolio</h2>
+    <div class="portfolio reveal">
+      <div class="pf-item"><span class="label">Uskoro</span><h3>Istraživački radovi</h3><p>Seminarski i istraživački radovi iz sociologije i javnih politika.</p></div>
+      <div class="pf-item"><span class="label">Uskoro</span><h3>Analize podataka</h3><p>Primjeri statističkih analiza u SPSS-u, R-u i Excelu.</p></div>
+      <div class="pf-item"><span class="label">Uskoro</span><h3>Projekti</h3><p>Materijali s projekata BlendEd, ConSiMium i drugih.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="block" id="vjestine">
   <div class="wrap">
     <h2 class="reveal">Vještine</h2>
@@ -415,7 +443,6 @@
           <span>Regresijska analiza</span><span>Faktorska analiza</span><span>ANOVA</span>
           <span>SCRUM</span><span>Design Sprint</span>
         </div>
-        <p style="margin-top:18px">Seminari: Pisanje projekata za EU fondove (2023), Uvod u softversko inženjerstvo – Oracle Academy (2021), Napredni Excel – Srce.</p>
       </div>
       <div>
         <h3>Jezici &amp; ostalo</h3>
