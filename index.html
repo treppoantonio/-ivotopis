@@ -7,7 +7,7 @@
 <meta name="description" content="Antonio Treppo – prvostupnik sociologije, student diplomskog studija upravljanja i javnih politika. Istraživanje, analiza podataka i javne politike.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#1d1b16;
@@ -19,14 +19,13 @@
     --muted:#6b6455;
     --line:#cfc4b0;
     --accent:#b08a4f;
-    --serif:"Cormorant Garamond", Georgia, serif;
     --sans:"Inter", system-ui, -apple-system, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:inherit}
-  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1}
+  h1,h2,h3{font-weight:300;line-height:1.15;letter-spacing:-.02em}
   .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
   .label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
 
@@ -34,7 +33,7 @@
   nav{position:fixed;inset:0 0 auto 0;z-index:10;transition:background .3s, padding .3s;padding:18px 0}
   nav.scrolled{background:rgba(26,24,19,.92);backdrop-filter:blur(8px);padding:12px 0}
   nav .wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;color:var(--cream)}
-  nav .brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.32em;padding-left:.32em;text-decoration:none}
+  nav .brand{font-size:1.15rem;font-weight:500;letter-spacing:.4em;padding-left:.4em;text-decoration:none}
   nav ul{display:flex;gap:28px;list-style:none}
   nav ul a{text-decoration:none;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
   nav ul a:hover{opacity:1}
@@ -53,9 +52,9 @@
   .hero-btns .btn{min-width:150px;text-align:center}
   .hero-btns .btn.primary{background:var(--cream);color:var(--hero);border-color:var(--cream)}
   .hero-btns .btn.primary:hover{background:transparent;color:var(--cream)}
-  @media (max-width:520px){.hero-btns{display:grid;grid-template-columns:1fr 1fr;max-width:340px;margin-left:auto;margin-right:auto}.hero-btns .btn{min-width:0;padding:14px 10px}.hero-btns .btn.primary{grid-column:1/-1}}
+  @media (max-width:520px){.hero-btns{display:grid;grid-template-columns:1fr 1fr;max-width:340px;margin-left:auto;margin-right:auto}.hero-btns .btn{min-width:0;padding:14px 10px}}
   .hero h1{font-size:clamp(3rem,9vw,6.2rem);letter-spacing:.01em}
-  .hero .role{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.6rem);margin-top:10px;opacity:.85;font-style:italic}
+  .hero .role{font-size:clamp(.88rem,3.5vw,1.6rem);margin-top:12px;opacity:.85;font-weight:300}
   .hero .meta{margin-top:28px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
   .scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:1;color:var(--cream);opacity:.55;
     font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;text-decoration:none}
@@ -71,7 +70,7 @@
   .about .quote-col{background:var(--olive-2)}
   .about .photo{padding:0;background:#e9dfc8;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
   .about .photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
-  .about .quote{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);text-align:center}
+  .about .quote{font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:300;line-height:1.3;text-align:center}
   .about .quote small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-top:22px;opacity:.6}
   @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}.about .photo{order:-1;padding:32px 24px 0;background:var(--olive)}.about .photo img{height:auto;max-width:340px;object-fit:contain}}
 
@@ -83,17 +82,15 @@
   .timeline{border-top:1px solid var(--ink)}
   .item{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:34px 0;border-bottom:1px solid var(--line)}
   .item .date{font-size:.82rem;color:var(--muted);padding-top:6px}
-  .item h3{font-size:1.65rem}
+  .item h3{font-size:1.4rem;font-weight:400}
   .item .org{font-size:.9rem;font-weight:500;margin-top:4px}
   .item p,.item li{font-size:.95rem;color:#3d3a32}
   .item p{margin-top:10px}
   .item ul{margin:10px 0 0 18px}
-  .item a.more{display:inline-block;margin-top:10px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
+  .item a.more{display:inline-block;margin-top:10px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
   .item a.doc{margin-left:0;margin-right:18px}
   .card .docs{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-  .card a.doc{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start}
-  .card a.doc::before{content:"📄 ";}
-  .item a.doc::before{content:"📄 ";}
+  .card a.doc{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start}
   .award a.doc{display:inline-block;margin-top:8px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
   @media (max-width:700px){.item{grid-template-columns:1fr;gap:6px}}
 
@@ -102,7 +99,7 @@
   .card{padding:30px 28px 34px 0}
   .card+.card{padding-left:28px;border-left:1px solid var(--line)}
   .card .year{font-size:.8rem;color:var(--muted)}
-  .card h3{font-size:1.45rem;margin-top:10px}
+  .card h3{font-size:1.3rem;font-weight:400;margin-top:10px}
   .card p{font-size:.88rem;margin-top:8px;color:#3d3a32}
   @media (max-width:800px){.cards{grid-template-columns:1fr}.card,.card+.card{padding:26px 0;border-left:0;border-bottom:1px solid var(--line)}}
 
@@ -111,7 +108,7 @@
   .awards h2{font-size:clamp(2.2rem,4.5vw,3.2rem);margin-bottom:50px}
   .award-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(247,241,230,.15);border:1px solid rgba(247,241,230,.15)}
   .award{background:var(--hero);padding:44px 32px}
-  .award .star{font-family:var(--serif);font-size:2.6rem;color:var(--accent)}
+  .award .star{font-size:2.6rem;color:var(--accent)}
   .award h3{font-size:1.6rem;margin:8px 0 10px}
   .award p{font-size:.88rem;opacity:.7}
   @media (max-width:900px){.award-grid{grid-template-columns:1fr}}
@@ -142,7 +139,7 @@
   .contact-info div{padding:26px 16px}
   .contact-info div+div{border-left:1px solid rgba(247,241,230,.2)}
   .contact-info span.label{display:block;opacity:.55;margin-bottom:10px;font-family:var(--sans);font-size:.72rem}
-  .contact-info a,.contact-info span{font-family:var(--serif);font-size:1.3rem;text-decoration:none;line-height:1.35}
+  .contact-info a,.contact-info span{font-size:1.1rem;font-weight:400;text-decoration:none;line-height:1.35}
   .contact-info a:hover{color:var(--accent)}
   @media (max-width:700px){.contact-info{grid-template-columns:1fr}.contact-info div+div{border-left:0;border-top:1px solid rgba(247,241,230,.2)}}
   .contact .links{margin-top:40px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
@@ -176,13 +173,13 @@
   <div class="hero-inner">
     <h1>Antonio Treppo</h1>
     <div class="role">Sociolog · Statistika · Podaci · Financije · Politika</div>
-    <div class="meta">Ivanić Grad · Zagreb</div>
     <div class="hero-btns">
       <a class="btn" href="#obrazovanje">Obrazovanje</a>
       <a class="btn" href="#iskustvo">Iskustvo</a>
       <a class="btn" href="#volontiranje">Volontiranje</a>
       <a class="btn" href="#nagrade">Nagrade</a>
       <a class="btn primary" href="#portfolio">Portfolio</a>
+      <a class="btn" href="#kontakt">Kontakt</a>
     </div>
   </div>
   <a href="#o-meni" class="scroll">Dalje</a>
@@ -191,7 +188,7 @@
 <section class="about" id="o-meni">
   <div class="col left reveal">
     <span class="label">O meni</span>
-    <p>Prvostupnik sam sociologije s Hrvatskog katoličkog sveučilišta, a trenutno studiram na diplomskoj razini <em>Upravljanje i kreiranje javnih politika</em>.</p>
+    <p>Prvostupnik sam sociologije s Hrvatskog katoličkog sveučilišta, a trenutno studiram na diplomskoj razini Upravljanje i kreiranje javnih politika.</p>
     <p>Kroz studij sam stekao znanja iz makro i mikroekonomske analize, kreiranja politika, strukturiranja intervjua i fokus grupa, izrade istraživačkih instrumenata poput anketa i analitičkih matrica te statističke obrade i prikazivanja podataka.</p>
     <p>Sebe u budućnosti vidim u visokom obrazovanju, financijskom sektoru, agencijama za istraživanje tržišta ili ljudskim potencijalima.</p>
   </div>
@@ -206,12 +203,12 @@
     <h2 class="reveal">Obrazovanje</h2>
     <div class="cards reveal">
       <div class="card">
-        <div class="year">u tijeku</div>
+        <div class="year">10/2024 – danas</div>
         <h3>Diplomski studij</h3>
         <p>Upravljanje i kreiranje javnih politika<br>Hrvatsko katoličko sveučilište, Zagreb</p>
       </div>
       <div class="card">
-        <div class="year">2021 – 2024</div>
+        <div class="year">10/2021 – 6/2024</div>
         <h3>Prvostupnik sociologije</h3>
         <p>Hrvatsko katoličko sveučilište, Zagreb<br>Težinski prosjek ocjena: 4,624 · 182 ECTS</p>
         <p>Kolegiji metodološke, političke, ekonomske, teorijske i statističke prirode.</p>
@@ -243,7 +240,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">09/2023</div>
+        <div class="date">9/2023</div>
         <div>
           <h3>Design Sprint metoda</h3>
           <div class="org">Odjel za sociologiju, Hrvatsko katoličko sveučilište</div>
@@ -252,7 +249,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">04/2023</div>
+        <div class="date">4/2023</div>
         <div>
           <h3>Pisanje projekata financiranih iz EU fondova</h3>
           <div class="org">Odjel za sociologiju, Hrvatsko katoličko sveučilište</div>
@@ -260,7 +257,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">09/2021</div>
+        <div class="date">9/2021</div>
         <div>
           <h3>Uvod u softversko inženjerstvo za studente društvenih znanosti</h3>
           <div class="org">Hrvatsko katoličko sveučilište · Oracle Academy · 1 ECTS</div>
@@ -276,7 +273,7 @@
     <h2 class="reveal">Radno iskustvo</h2>
     <div class="timeline">
       <div class="item reveal">
-        <div class="date">06/2025 – danas</div>
+        <div class="date">6/2025 – danas</div>
         <div>
           <h3>Čuvar ispita</h3>
           <div class="org">Sveučilište Algebra Bernays · Zagreb</div>
@@ -284,7 +281,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">06/2026 – 09/2026</div>
+        <div class="date">6/2026 – 9/2026</div>
         <div>
           <h3>Houseperson i Janitor</h3>
           <div class="org">Westmark Hotel · Fairbanks, Aljaska (SAD)</div>
@@ -296,7 +293,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">10/2023 – 07/2026</div>
+        <div class="date">10/2023 – 7/2026</div>
         <div>
           <h3>Demonstrator</h3>
           <div class="org">Hrvatsko katoličko sveučilište · Zagreb</div>
@@ -310,7 +307,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">02/2026 – 05/2026</div>
+        <div class="date">2/2026 – 5/2026</div>
         <div>
           <h3>Administrativni radnik</h3>
           <div class="org">Erste banka d.d. · Zagreb</div>
@@ -322,7 +319,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">12/2024 – 04/2025</div>
+        <div class="date">12/2024 – 4/2025</div>
         <div>
           <h3>Praksa – komercijalna kvaliteta</h3>
           <div class="org">Pliva d.o.o. · Zagreb</div>
@@ -330,7 +327,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">01/2025 – 02/2025</div>
+        <div class="date">1/2025 – 2/2025</div>
         <div>
           <h3>Praksa – istraživanje tržišta</h3>
           <div class="org">Hendal d.o.o. · Zagreb</div>
@@ -338,7 +335,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">04/2022 – 11/2024</div>
+        <div class="date">4/2022 – 11/2024</div>
         <div>
           <h3>Pomoćni radnik u kuhinji</h3>
           <div class="org">SC Prehrana – Restoran Stjepan Radić · Zagreb</div>
@@ -346,7 +343,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">02/2022 – 03/2022</div>
+        <div class="date">2/2022 – 3/2022</div>
         <div>
           <h3>Anketar za istraživanje tržišta</h3>
           <div class="org">IPSOS d.o.o.</div>
@@ -370,7 +367,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">02/2025 – 07/2025</div>
+        <div class="date">2/2025 – 7/2025</div>
         <div>
           <h3>Erasmus+ BlendEd – FLIP / Erste Bank</h3>
           <div class="org">UMAIA (Portugal) i Sveučilište u Trieru (Njemačka)</div>
@@ -380,7 +377,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">03/2025 – 05/2025</div>
+        <div class="date">3/2025 – 5/2025</div>
         <div>
           <h3>Erasmus+ BIP: Buduća politika u međunarodnom kontekstu</h3>
           <div class="org">Odjel za međunarodne i političke studije, Sveučilište u Łódźu</div>
@@ -390,7 +387,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">04/2024</div>
+        <div class="date">4/2024</div>
         <div>
           <h3>ConSiMium – simulacija Vijeća EU</h3>
           <div class="org">Glavno tajništvo Vijeća Europske unije · Bruxelles, 8. – 9. travnja 2024.</div>
@@ -399,7 +396,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">2023 – 2024</div>
+        <div class="date">1/2023 – 1/2024</div>
         <div>
           <h3>Pouke iz prošlosti: sukobi, oporavak i otpornost</h3>
           <div class="org">Hrvatsko katoličko sveučilište · za Nanovic Institute for European Studies</div>
@@ -433,7 +430,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">09/2025 – danas</div>
+        <div class="date">9/2025 – danas</div>
         <div>
           <h3>Član Vijeća Odjela za sociologiju</h3>
           <p>Izabrani studentski predstavnik za ak. god. 2025./2026. i 2026./2027. Zastupanje studenata sociologije i pomoć u provođenju odjelnih projekata.</p>
@@ -456,7 +453,7 @@
         </div>
       </div>
       <div class="item reveal">
-        <div class="date">10/2023 – 09/2024</div>
+        <div class="date">10/2023 – 9/2024</div>
         <div>
           <h3>Član Studentskog vijeća HKS-a</h3>
           <p>Predstavnik prijediplomskih studenata sociologije.</p>
@@ -473,13 +470,13 @@
       <div class="award">
         <div class="star">✦</div>
         <h3>Rektorova nagrada</h3>
-        <p>za izvrsnost tijekom prijediplomskog studija u ak. god. 2023./2024. · svibanj 2025.</p>
+        <p>za izvrsnost tijekom prijediplomskog studija u ak. god. 2023./2024. · 5/2025</p>
         <a class="doc" href="certifikati/rektorova-nagrada.pdf" target="_blank" rel="noopener">Pogledaj odluku</a>
       </div>
       <div class="award">
         <div class="star">✦</div>
         <h3>Rektorova pohvalnica</h3>
-        <p>za izvrsnost u ak. god. 2023./2024. · siječanj 2025.<br>Priznanje koje je prethodilo Rektorovoj nagradi.</p>
+        <p>za izvrsnost u ak. god. 2023./2024. · 1/2025<br>Priznanje koje je prethodilo Rektorovoj nagradi.</p>
       </div>
       <div class="award">
         <div class="star">✦</div>
