@@ -69,10 +69,11 @@
   .about .left p{font-size:.96rem;opacity:.88}
   .about .left p+p{margin-top:14px}
   .about .quote-col{background:var(--olive-2)}
-  .about .photo{padding:0;background:url("img/antonio-odijelo.jpg") center top / cover no-repeat;min-height:660px}
+  .about .photo{padding:0;background:#e9dfc8;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+  .about .photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
   .about .quote{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);text-align:center}
   .about .quote small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-top:22px;opacity:.6}
-  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}.about .photo{min-height:640px;order:-1}}
+  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}.about .photo{order:-1;padding:32px 24px 0;background:var(--olive)}.about .photo img{height:auto;max-width:340px;object-fit:contain}}
 
   /* SECTIONS */
   section.block{padding:110px 0}
@@ -194,7 +195,7 @@
     <p>Kroz studij sam stekao znanja iz makro i mikroekonomske analize, kreiranja politika, strukturiranja intervjua i fokus grupa, izrade istraživačkih instrumenata poput anketa i analitičkih matrica te statističke obrade i prikazivanja podataka.</p>
     <p>Sebe u budućnosti vidim u visokom obrazovanju, financijskom sektoru, agencijama za istraživanje tržišta ili ljudskim potencijalima.</p>
   </div>
-  <div class="col photo" role="img" aria-label="Antonio Treppo"></div>
+  <div class="col photo"><img src="img/antonio-odijelo.jpg?v=3" alt="Antonio Treppo" width="731" height="1275"></div>
   <div class="col quote-col reveal">
     <div class="quote">Podaci pričaju<br>priče o ljudima.<small>Sociologija · Statistika · Politike</small></div>
   </div>
