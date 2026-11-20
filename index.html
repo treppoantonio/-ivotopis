@@ -62,17 +62,15 @@
   @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
   /* ABOUT */
-  .about{background:var(--olive);color:var(--cream);display:grid;grid-template-columns:1.1fr 0.9fr 1fr;min-height:560px}
+  .about{background:var(--olive);color:var(--cream);display:grid;grid-template-columns:1.1fr 1fr;min-height:520px}
   .about .col{padding:80px 56px;display:flex;flex-direction:column;justify-content:center}
   .about .left .label{margin-bottom:22px;opacity:.7}
   .about .left p{font-size:.96rem;opacity:.88}
   .about .left p+p{margin-top:14px}
   .about .quote-col{background:var(--olive-2)}
-  .about .photo{padding:0;background:#e9dfc8;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-  .about .photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
   .about .quote{font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:300;line-height:1.3;text-align:center}
   .about .quote small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-top:22px;opacity:.6}
-  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}.about .photo{order:-1;padding:32px 24px 0;background:var(--olive)}.about .photo img{height:auto;max-width:340px;object-fit:contain}}
+  @media (max-width:900px){.about{grid-template-columns:1fr}.about .col{padding:48px 24px}.scroll{display:none}}
 
   /* SECTIONS */
   section.block{padding:110px 0}
@@ -184,7 +182,6 @@
     <p>Kroz studij sam stekao znanja iz makro i mikroekonomske analize, kreiranja politika, strukturiranja intervjua i fokus grupa, izrade istraživačkih instrumenata poput anketa i analitičkih matrica te statističke obrade i prikazivanja podataka.</p>
     <p>Sebe u budućnosti vidim u visokom obrazovanju, financijskom sektoru, agencijama za istraživanje tržišta ili ljudskim potencijalima.</p>
   </div>
-  <div class="col photo"><img src="img/antonio-odijelo.jpg?v=3" alt="Antonio Treppo" width="731" height="1275"></div>
   <div class="col quote-col reveal">
     <div class="quote">Podaci pričaju<br>priče o ljudima.<small>Sociologija · Statistika · Politike</small></div>
   </div>
