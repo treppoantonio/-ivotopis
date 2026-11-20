@@ -101,8 +101,12 @@
   @media (max-width:900px){.hero-chart{height:auto;width:70vw;right:-8vw;opacity:.18}.hero-chart-l{display:none}}
   @media (prefers-reduced-motion:reduce){.hero-chart *,.hero-chart-l *{animation:none!important;stroke-dashoffset:0!important;opacity:1!important}}
   .about .quote-col{position:relative;overflow:hidden}
-  .quote-deco{left:0;right:0;bottom:0;width:100%;height:46%;opacity:.35}
+  .quote-deco{left:0;right:0;bottom:0;width:100%;height:16%;opacity:.35}
   .about .quote{position:relative;z-index:1}
+  .about .quote-col{align-items:center}
+  .portrait{position:relative;z-index:1;width:min(260px,62vw);aspect-ratio:1;margin:0 auto 34px;border-radius:50%;padding:6px;border:1px solid rgba(176,138,79,.7)}
+  .portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;border-radius:50%}
+  .about .quote{font-size:clamp(1.5rem,2.2vw,2rem)}
   .block h2::after{content:"";display:block;width:56px;height:2px;background:var(--accent);margin-top:18px}
   .awards,.contact{position:relative;overflow:hidden}
   .awards>.wrap,.contact>.wrap{position:relative;z-index:1}
@@ -225,6 +229,7 @@
   </div>
   <div class="col quote-col reveal">
     <svg class="deco quote-deco" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0,170 C80,150 120,110 190,120 S300,60 370,80 S480,20 600,30 L600,200 L0,200Z" fill="#b08a4f" opacity=".25"/><path d="M0,170 C80,150 120,110 190,120 S300,60 370,80 S480,20 600,30" fill="none" stroke="#b08a4f" stroke-width="1.5"/></svg>
+    <figure class="portrait"><img src="img/antonio-treppo.jpg" alt="Antonio Treppo" width="800" height="800" loading="lazy"></figure>
     <div class="quote">Podaci pričaju<br>priče o ljudima.<small>Sociologija · Statistika · Politike</small></div>
   </div>
 </section>
